@@ -8,40 +8,89 @@
 
 body {
   font-family: 'Raleway', sans-serif;
+  font-size: 16px;
 }
 
 header {
   background-color: #fff;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
+  height: 110px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+
   position: fixed;
   top: 0;
   left: 0;
-  padding: 50px;
-  text-align: center;
-  width: 100%;
-  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
-header h1 {
-  padding-bottom: 30px;
+.title {
+  padding-bottom: 10px;
+  text-transform: uppercase;
 }
 
-ul {
+/* Menu oculto */
+.short-menu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.short-menu img {
+  width: 35px;
+}
+
+/* */
+
+.menu-items {
+  display: block;
   list-style: none;
 }
 
-ul li {
+.menu-items li {
   display: inline-block;
+}
+
+.menu-items li a {
+  font-size: 18px;
+  color: #555;
+  text-decoration: none;
   padding: 10px 20px;
 }
 
-ul li a {
-  color: #555;
-  text-decoration: none;
+.actual {
+  color: rgb(189, 4, 4) !important;
+  font-weight: 600;
 }
 
 footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
   background: #999;
   text-align: center;
   width: 100%;
   padding: 20px 0;
+  z-index: 19;
+}
+
+@media (max-width: 455px) {
+  .short-menu {
+    display: block;
+  }
+
+  .menu-items {
+    display: none;
+  }
+
+  .title {
+    text-align: left;
+  }
+
+  header {
+    height: 70px;
+  }
 }
