@@ -1,4 +1,70 @@
 .banner img {
-  padding: 100px 0 0 0;
+  position: relative;
+  max-width: 100%;
   width: 100%;
+  z-index: 2;
+  padding-top: 20px;
+}
+
+.index-content {
+  background-color: #fff;
+  padding: 20px;
+  margin: 40px auto;
+
+  position: relative;
+  z-index: 5;
+}
+
+.concept {
+  width: 80%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.concept p {
+  margin: 20px 0;
+}
+
+.album {
+  margin: 70px auto 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  width: 80%;
+}
+
+.album-image {
+  background-color: #000;
+}
+
+.album-img img {
+  float: left;
+  width: 50%;
+}
+
+.album-list ol {
+  float: left;
+  padding: 30px;
+  width: 50%;
+}
+
+.album-list ol li {
+  padding: 15px 0;
+}
+
+.album-list ol li span {
+  color: orange;
+  font-weight: 700;
+}
+
+@media (max-width: 455px) {
+  .album {
+    width: 100%;
+  }
+
+  .album-img img {
+    width: 100%;
+  }
+  .album-list ol {
+    width: 100%;
+  }
 }
