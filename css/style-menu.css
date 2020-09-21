@@ -15,7 +15,6 @@ header {
   background-color: #fff;
   box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
   height: 110px;
-  padding: 20px;
   text-align: center;
   width: 100%;
   max-width: 100%;
@@ -27,23 +26,13 @@ header {
 }
 
 .title {
-  padding-bottom: 10px;
+  padding: 20px 10px 10px 20px;
   text-transform: uppercase;
 }
 
-/* Menu oculto */
-.short-menu {
+#menu-toggle {
   display: none;
-  position: absolute;
-  right: 20px;
-  top: 20px;
 }
-
-.short-menu img {
-  width: 35px;
-}
-
-/* */
 
 .menu-items {
   display: block;
@@ -78,19 +67,49 @@ footer {
 }
 
 @media (max-width: 455px) {
-  .short-menu {
-    display: block;
-  }
-
-  .menu-items {
-    display: none;
+  header {
+    height: 70px;
   }
 
   .title {
     text-align: left;
   }
 
-  header {
-    height: 70px;
+  .menu-items {
+    background-color: orange;
+    position: fixed;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .menu-items li {
+    display: block;
+    padding: 15px;
+  }
+
+  .menu-items li a {
+    color: #fff;
+  }
+
+  .menu-btn {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    cursor: pointer;
+    background-color: orange;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10%;
+    text-align: center;
+  }
+
+  .menu-btn:after {
+    content: 'MENU';
+    font-weight: 700;
+  }
+
+  #menu-toggle:checked ~ .menu-items {
+    transform: translateX(0%);
   }
 }
