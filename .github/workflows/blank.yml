@@ -1,0 +1,14 @@
+name: Exemplo de um fluxo de trabalho
+
+on:
+  workflow_dispatch:
+
+jobs:
+  on_start:
+    runs-on: ubuntu latest
+    steps:
+      - name: imprime COMEÇOU
+        run: echo "COMEÇOU"
+      - name: imprime TERMINOU
+        run: echo "TERMINOU"      
+    
